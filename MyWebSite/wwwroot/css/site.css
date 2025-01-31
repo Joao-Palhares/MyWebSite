@@ -1,0 +1,49 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    
+    margin-bottom: 60px;
+}
+.principal {
+    margin-top: 60px;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.about-me-container{
+    border:5px solid black;
+}
+.about-me-container h1{
+    text-align:center
+}
+.about-me-container p {
+    width: 80%; /* Adjust as needed */
+    max-width: 600px; /* Prevents it from being too wide */
+    margin: auto; /* Centers the container */
+    text-align: justify; /* Justifies the text */
+    word-wrap: break-word; /* Ensures long words break */
+    overflow-wrap: break-word; /* Alternative for word breaking */
+}
