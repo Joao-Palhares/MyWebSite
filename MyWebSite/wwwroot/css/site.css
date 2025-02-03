@@ -43,7 +43,8 @@ body {
 
 .about-me-container {
     border: 5px solid black;
-    width: 80%;
+    border-radius: 20px;
+    width: 100%;
     max-width: 600px;
 }
 
@@ -66,10 +67,24 @@ body {
 
 .last-video-container {
     border: 5px solid black;
-    width: 80%;
+    border-radius:20px;
+    width: 100%;
     max-width: 600px;
     margin-left:200px;
 }
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    height: 100%;
+    width: 100%;
+}
+
+    .video-container iframe {
+        width: 90%;
+        height: 80%;
+    }
 
 
 .icon {
@@ -81,9 +96,6 @@ body {
     transform-origin: center;
     user-select: none; /* Prevent text selection */
     -webkit-user-drag: none; /* Disable image dragging in WebKit browsers */
-    -moz-user-drag: none; /* Disable image dragging in Firefox */
-    -o-user-drag: none;
-    user-drag: none;
     pointer-events: auto;
 }
 
@@ -94,8 +106,5 @@ body {
     pointer-events: none; /* Prevent further clicks */
     user-select: none;
     -webkit-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
-    user-drag: none;
     pointer-events: none;
 }

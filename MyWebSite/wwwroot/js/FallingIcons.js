@@ -1,4 +1,13 @@
-﻿// Function to create a falling icon
+﻿document.addEventListener("click", () => {
+    var unlockSound = new Audio("/sounds/explosion.mp3");
+    unlockSound.play().then(() => {
+        console.log("Audio unlocked after user interaction.");
+    }).catch(error => {
+        console.error("Audio playback error:", error);
+    });
+}, { once: true }); // Runs only once
+
+// Function to create a falling icon
 function createFallingIcon() {
     const icon = document.createElement("img");
     icon.src = "/imgs/Gaming.png"; // Ensure correct path
@@ -35,6 +44,7 @@ function createFallingIcon() {
     }, 16); // Smooth 60 FPS animation
 }
 
+
 // Function to destroy the icon and show an explosion
 function destroyIcon(icon, posY, posX) {
     // Remove the clicked icon
@@ -42,14 +52,26 @@ function destroyIcon(icon, posY, posX) {
 
     // Create an explosion image
     const explosion = document.createElement("img");
+
     explosion.src = "/imgs/explosion.gif"; // Add your explosion GIF in /wwwroot/imgs/
     explosion.classList.add("explosion");
+
     explosion.style.left = `${posX}px`;
     explosion.style.top = `${posY}px`;
 
     // Append explosion to body
     document.body.appendChild(explosion);
+    const bombsound = new Audio("/sounds/explosion.mp3");
 
+    console.log("Trying to play sound...");
+
+    // Play sound immediately
+    bombsound.volume=0.1
+    bombsound.play().then(() => {
+        console.log("Sound played successfully.");
+    }).catch(error => {
+        console.error("Audio playback error:", error);
+    });
     // Remove explosion after animation (adjust time based on explosion duration)
     setTimeout(() => {
         explosion.remove();

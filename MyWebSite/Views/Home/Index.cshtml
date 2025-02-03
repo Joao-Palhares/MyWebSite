@@ -24,7 +24,9 @@
         @if (!string.IsNullOrEmpty(videoUrl))
         {
             <h1>Latest Video</h1>
-            <iframe width="560" height="315" src="@videoUrl" frameborder="0" allowfullscreen></iframe>
+            <div class="video-container">
+                <iframe width="560" height="315" src="@videoUrl" frameborder="0" allowfullscreen></iframe>
+            </div>
 
         }
         else
