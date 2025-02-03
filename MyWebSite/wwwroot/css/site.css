@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    
+    overflow: hidden;
     margin-bottom: 60px;
 }
 .principal {
@@ -33,17 +33,69 @@ body {
     justify-content: space-between;
 }
 
-.about-me-container{
-    border:5px solid black;
+.justify-content-space-evenly {
+    justify-content: space-evenly
 }
-.about-me-container h1{
-    text-align:center
+
+.justify-content-space-around {
+    justify-content: space-around;
 }
+
+.about-me-container {
+    border: 5px solid black;
+    width: 80%;
+    max-width: 600px;
+}
+
+.about-me-container, .last-video-container h1 {
+    text-align: center;
+    padding-top: 20px;
+}
+
 .about-me-container p {
-    width: 80%; /* Adjust as needed */
-    max-width: 600px; /* Prevents it from being too wide */
-    margin: auto; /* Centers the container */
-    text-align: justify; /* Justifies the text */
-    word-wrap: break-word; /* Ensures long words break */
-    overflow-wrap: break-word; /* Alternative for word breaking */
+    width: 80%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: justify;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.last-video-container {
+    border: 5px solid black;
+    width: 80%;
+    max-width: 600px;
+    margin-left:200px;
+}
+
+
+.icon {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: -100px; /* Start above the screen */
+    will-change: transform;
+    transform-origin: center;
+    user-select: none; /* Prevent text selection */
+    -webkit-user-drag: none; /* Disable image dragging in WebKit browsers */
+    -moz-user-drag: none; /* Disable image dragging in Firefox */
+    -o-user-drag: none;
+    user-drag: none;
+    pointer-events: auto;
+}
+
+.explosion {
+    position: fixed; /* Same as falling icons */
+    width: 100px; /* Adjust size */
+    height: 100px; /* Adjust size */
+    pointer-events: none; /* Prevent further clicks */
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    pointer-events: none;
 }
