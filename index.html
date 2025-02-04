@@ -1,0 +1,73 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="MyWebSite/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="MyWebSite/MyWebSite.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="MyWebSite/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MyWebSite</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <script class="icon" src="MyWebSite/js/FallingIcons.js"></script>
+            <div class="text-center">
+                <h1 class="display-flex justify-content-center">Welcome to my website </h1>
+            </div>
+            
+            <div class="principal display-flex justify-content-space-between">
+                <div class="about-me-container">
+                    <h1>About me</h1>
+                    <p>
+                        Hello there, Welcome to my WebSite!<br />
+                        I'm João Palhares, a Portuguese software developer with a passion for technology and problem-solving. 
+                        I love learning new things, especially when it comes to Artificial Intelligence, cars, and Arduino. 
+                        While these are just hobbies, I enjoy exploring how things work and diving into technical details.
+                        Outside of coding and tech, I’m also passionate about gaming, game development, and video editing, 
+                        whether it’s creating, playing, or experimenting with new ideas.
+                        Feel free to explore my work, and if you share any of these interests, let’s connect!
+                    </p>
+                </div>
+                <div class="last-video-container">
+                    
+                </div>
+                
+            </div>
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - MyWebSite - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="MyWebSite/lib/jquery/dist/jquery.min.js"></script>
+    <script src="MyWebSite/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="MyWebSite/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
